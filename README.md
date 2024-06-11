@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Server Priority API is a NestJS-based application that evaluates a list of web servers and returns the online server with the lowest priority. This project showcases the integration of various technologies including NestJS, TypeScript, Axios for HTTP requests, and ReDoc for API documentation.
+The Server Priority API is a NestJS-based application that evaluates a list of web servers and returns the online server with the lowest priority. This project showcases the integration of various technologies including NestJS, TypeScript, Axios for HTTP requests, and Swagger for API documentation.
 
 ## Features
 
