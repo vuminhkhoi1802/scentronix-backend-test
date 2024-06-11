@@ -17,7 +17,6 @@ The Server Priority API is a NestJS-based application that evaluates a list of w
 - **NestJS**: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
 - **TypeScript**: A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 - **Axios**: A promise-based HTTP client for making HTTP requests.
-- **ReDoc**: OpenAPI/Swagger-generated API documentation with a simple and elegant UI.
 - **Jest**: A delightful JavaScript testing framework with a focus on simplicity.
 - **axios-mock-adapter**: Axios adapter for handling HTTP requests in tests.
 
