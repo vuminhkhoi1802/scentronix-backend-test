@@ -69,7 +69,7 @@ describe('FindServerService', () => {
       mock.onGet('https://offline.scentronix.com').reply(404);
 
       const result = await service.findServer(servers);
-      expect(result).toEqual({ url: 'http://app.scnt.me', priority: 3 });
+      expect(result).toEqual({ url: 'https://gitlab.com', priority: 4 });
     });
 
     it('should throw an error if no servers are online', async () => {

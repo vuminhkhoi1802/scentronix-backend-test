@@ -66,15 +66,56 @@ npm run start:dev
 
 #The server will be running on http://localhost:4000 by default.
 ```
+
+### Alternative Approach
+Make sure you have `Docker` and `Docker Compose` installed on your machine.
+
+- Using Docker:
+
+```bash
+# Build the Docker image
+docker build -t scentronix-backend-test .
+
+# Run the Docker container
+docker run -p 4000:4000 scentronix-backend-test
+````
+- Using Docker Compose:
+
+```bash
+# Build the Docker image
+docker compose build # or docker-compose build
+# Run the Docker container
+docker compose up # or docker-compose up
+```
+
 ### API Documentation
 
 - Swagger UI: `http://localhost:4000/api`
 
 ### Testing
-```bash
-curl -X 'GET' \
-  'http://localhost:4000/servers/find?urls=https%3A%2F%2Fdoes-not-work.perfume.new%2Chttps%3A%2F%2Fgitlab.com%2Chttp%3A%2F%2Fapp.scnt.me%2Chttps%3A%2F%2Foffline.scentronix.com&priorities=1%2C4%2C3%2C2' \
-  -H 'accept: application/json'
+```shell
+curl --location 'http://localhost:4000/servers/find' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--data '[
+  {
+    "url": "https://does-not-work.perfume.new",
+    "priority": 1
+  },
+  {
+    "url": "https://gitlab.com",
+    "priority": 4
+  },
+  {
+    "url": "http://app.scnt.me",
+    "priority": 3
+  },
+  {
+    "url": "https://offline.scentronix.com",
+    "priority": 2
+  }
+]
+'
 ```
 -> Result:
 ```json

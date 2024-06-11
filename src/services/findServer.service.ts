@@ -42,7 +42,7 @@ export class FindServerService {
       throw new HttpException('No servers are online', 503);
     }
 
-    onlineServers.sort((a, b) => a.priority - b.priority);
+    onlineServers.sort((a, b) => Number(b.priority) - Number(a.priority)); // Sort by priority in descending order
     const selectedServer = onlineServers[0];
 
     this.logger.log(
