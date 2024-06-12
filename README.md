@@ -158,6 +158,7 @@ The FindServerController handles incoming HTTP requests and delegates the logic 
 
 - `findServer`:
   + Accepts urls and priorities as query parameters.
+  + Validate the incoming request body using Yup schema library.
   + Logs the incoming request.
   + Calls the service to find the server with the lowest priority.
 
